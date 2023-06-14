@@ -28,6 +28,13 @@ trainer = Trainer(model, criterion, optimizer, ...)
 trainer.PU_ensemble_train("id_prop_train.csv", result_dir="/result")
 ```
 Then you can find your ensemble-models as `/result/1.pt`, `/result/2.pt`, `/result/3.pt`, ...
+If you want to use exactly the same framework as the original, you shoud modify `config.py` as:
+```
+    # Ensemble_mode
+    n_bag = 50
+    bag_PU_iter = 1 
+```
+
 
 #### - CGCNN Implementation
 
