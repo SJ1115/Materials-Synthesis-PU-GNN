@@ -12,7 +12,7 @@ Although this repo is an *re-Implementation* work, there exist some **differents
 * CGCNN Implementation
 
 #### - Training Framework(PU Learning)
-In the original work, the authors used PU-bagging in **parallel** manner. It means, they trained 50(by default) independent model within each PU-bagging split. However, I used PU-bagging in **Seria*l* manner. I trained 1 model, with iterative splitting PU-bag. In other words, the result of the original is *the ensemble of 50 models each with 30 epochs(by default)*. And, the result of my work is *the one model with 1500(50\*30) epochs*.
+In the original work, the authors used PU-bagging in **parallel** manner. It means, they trained 50(by default) independent model within each PU-bagging split. However, I used PU-bagging in **Serial** manner. I trained 1 model, with iterative splitting PU-bag. In other words, the result of the original is *the ensemble of 50 models each with 30 epochs(by default)*. And, the result of my work is *the one model with 1500(50\*30) epochs*.
 
 At the time of my implementation, it was just a mis-understanding of the [paper](https://pubs.acs.org/doi/pdf/10.1021/jacs.0c07384). By the way, the result of that work performs on far as the originals(you can see its result in [here](https://github.com/SJ1115/Materials-Synthesis-PU-GNN/blob/main/result/score/old.png)). Sometimes it can be more attractive since we only have to keep 1 model spaces.
 If you want to use this training framework, you can train it by:
